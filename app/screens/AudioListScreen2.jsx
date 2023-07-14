@@ -11,7 +11,7 @@ export default function AudioListScreen({ childToParent }) {
     const navigation = useNavigation();
 
     const handleClick = (item) => {
-        <MiniPlayer audio={item} />
+        childToParent(item)
     }
 
     useEffect(() => {
@@ -60,6 +60,7 @@ export default function AudioListScreen({ childToParent }) {
                         <Text style={styles.horizontalArtist}>{item.artistName}</Text>
                     </View>
                 )}
+                horizontal
             />
         </View>
     );

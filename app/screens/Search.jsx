@@ -101,7 +101,7 @@ export default function Search() {
                         )}
                     </View>
 
-                    <Text style={{ color: 'pink', fontSize: 25, fontWeight: 'bold' }}>Áudios</Text>
+                    <Text style={{ color: 'pink', fontSize: 25, fontWeight: 'bold', marginTop: 10 }}>Áudios</Text>
 
                     <View style={styles.resultsContainer}>
                         {isLoading ? (
@@ -111,14 +111,14 @@ export default function Search() {
                         )}
                     </View>
 
-                    <Text style={{ color: 'pink', fontSize: 25, fontWeight: 'bold' }}>Artistas</Text>
+                    <Text style={{ color: 'pink', fontSize: 25, fontWeight: 'bold', marginTop: 10 }}>Usuários</Text>
 
                     <View style={styles.resultsContainer}>
                         {isLoading ? (
                             <ActivityIndicator size="small" color="pink" />
                         ) : (
                             artists.map((artist, index) => (
-                                <Text key={index} style={{ color: 'grey', fontSize: 15, fontWeight: 'bold', opacity: 0.5 }}>
+                                <Text key={index} style={{ color: 'grey', fontSize: 15, fontWeight: 'bold', opacity: 0.5, marginBottom: 15 }}>
                                     {artist.name} {artist.surname}
                                 </Text>
                             ))
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
         color: 'grey',
         opacity: 0.5,
         paddingTop: 15,
-        marginTop: 20,
+        marginTop: '15%',
         marginBottom: 10,
     },
     inputContainer: {

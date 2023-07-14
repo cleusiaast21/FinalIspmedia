@@ -7,7 +7,7 @@ import { getStorage } from "firebase/storage";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-/*const firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyD87eVGe7vyOAA18GvKJUY4HocMPled3YY",
   authDomain: "ispmedia-e6cc7.firebaseapp.com",
   projectId: "ispmedia-e6cc7",
@@ -15,8 +15,8 @@ import { getStorage } from "firebase/storage";
   messagingSenderId: "104970647091",
   appId: "1:104970647091:web:f2ada78ce36effb1009546",
   measurementId: "G-PLR6R1MDNQ"
-};*/
- 
+};
+ /*
 const firebaseConfig = {
   apiKey: "AIzaSyBNzFGJ9NXcaRW7vByAKkDXM_KbXWEBtec",
   authDomain: "ispmedia-7f000.firebaseapp.com",
@@ -24,7 +24,7 @@ const firebaseConfig = {
   storageBucket: "ispmedia-7f000.appspot.com",
   messagingSenderId: "250632601182",
   appId: "1:250632601182:web:1cd7c9bb1780d4f4447ecf"
-}; 
+}; */
 
 // Initialize Firebase
 export const FIREBASE_APP = initializeApp(firebaseConfig);

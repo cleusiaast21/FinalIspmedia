@@ -6,7 +6,7 @@ import profileImage from '../assets/logo.jpg';
 import AudioListScreen from './AudioListScreen.jsx';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import PlayListSongs from './PlayListSongs.jsx';
+import MiniPlayer from '../components/MiniPlayer2';
 import AudioListScreen2 from './AudioListScreen2';
 
 
@@ -82,6 +82,7 @@ export default function Home({ route }) {
 
 
             </ScrollView>
+            
 
 
             <View style={styles.bottomNav}>
@@ -125,7 +126,7 @@ const styles = StyleSheet.create({
     },
     header: {
         flexDirection: 'row',
-        marginTop: 45,
+        marginTop: '15%',
         justifyContent: 'space-between',
     },
     iconSearch: {

@@ -61,13 +61,21 @@ const RadioListScreen = () => {
 
   const handlePlayRadio = async (radio) => {
     try {
+      // Pause any currently playing radio
+      radios.forEach((r) => {
+        if (r.isPlaying && r.soundObject) {
+          r.soundObject.pauseAsync();
+          r.isPlaying = false;
+        }
+      });
+  
       if (radio.isLoading) {
-        return; // Evita que o botão seja pressionado várias vezes enquanto o áudio está carregando
+        return; // Prevent multiple button presses while audio is loading
       }
-
+  
       radio.isLoading = true;
       setRadios([...radios]);
-
+  
       if (radio.isPlaying) {
         if (radio.soundObject) {
           await radio.soundObject.pauseAsync();
@@ -85,15 +93,16 @@ const RadioListScreen = () => {
           radio.isPlaying = true;
         }
       }
-
+  
       radio.isLoading = false;
       setRadios([...radios]);
     } catch (error) {
-      console.error('Erro ao reproduzir o áudio:', error);
+      console.error('Error playing audio:', error);
       radio.isLoading = false;
       setRadios([...radios]);
     }
   };
+  
 
   return (
     <View>

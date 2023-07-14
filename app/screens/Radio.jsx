@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     },
     header: {
         flexDirection: 'row',
-        marginTop: 45,
+        marginTop: '15%',
         justifyContent: 'space-between',
     },
     iconSearch: {

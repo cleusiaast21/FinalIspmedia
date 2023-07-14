@@ -3,7 +3,7 @@ import { View, Text, FlatList, StyleSheet, Image, TouchableOpacity, ScrollView }
 import { getFirestore, collection, onSnapshot, query, orderBy, doc, getDoc } from 'firebase/firestore';
 import { FIREBASE_DB } from '../../FirebaseConfig';
 import profileImage from '../assets/logo.jpg';
-import VideoListScreen from './VideoListScreen.jsx';
+import VideoListScreen from '../components/VideoListScreen2.jsx';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     },
     header: {
         flexDirection: 'row',
-        marginTop: 45,
+        marginTop: '15%',
         justifyContent: 'space-between',
     },
     iconSearch: {
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     },
     rectangularCover: {
         marginTop: 10,
-        width: 150,
+        width: '100',
         height: 150,
         borderRadius: 0,
     },
